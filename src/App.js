@@ -1,8 +1,15 @@
+import Home from "./routes/Home";
+import Detail from "./routes/Detail";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+
 function App() {
   return (
-    <div>
-      <h1>Welcome back!</h1>
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/movie/:id" element={<Detail />} />
+        <Route path="/" element={<Home />} />
+      </Routes>
+    </Router>
   );
 }
 
